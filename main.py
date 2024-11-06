@@ -37,6 +37,11 @@ playlist_b = {
     'Опять метель': 3.37,
     }
 
+#Начало написания кода
+import random
+from datetime import timedelta
 
-
- 
+def get_duration(playlist: iter, n: int):
+    sumTm = timedelta(minutes=0, seconds=0)       # Суммарное время песен
+    length = len(playlist) - 1
+#дальше нужно сделать плейлисты в одном виде
