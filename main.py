@@ -36,3 +36,6 @@ playlist_b = {
     'Улетаю': 3.24,
     'Опять метель': 3.37,
     }
+#Начало кода
+import random
+from datetime import timedelta
