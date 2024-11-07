@@ -54,4 +54,4 @@ n = int(input("Введите количество песен: "))
 print(get_duration(playlist_b, n))
 print(get_duration(playlist_d, n))
 
-#Проверила, работает
+#Проверила, работает.
