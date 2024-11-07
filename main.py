@@ -41,13 +41,25 @@ playlist_b = {
 import random
 from datetime import timedelta
 
+
 def get_duration(playlist: iter, n: int):
     sumTm = timedelta(minutes=0, seconds=0)       # Суммарное время песен
     length = len(playlist) - 1
 
-if playlist != list(playlist):  # Приводим списки к единому виду
+    if playlist != list(playlist):  # Приводим списки к единому виду
         playlist = list(map(list, zip(*list(playlist.items()))))
 
-for i in range(n):
+    for i in range(n):
         nIter = random.randint(0, length) # Рандомное число песен
-        currTm = str(playlist[1]:[nIter]) # Преобразуем в строку
+        currTm = str(playlist[1][nIter]) # Преобразуем в строку
+        
+        #Исправила ошибку
+
+        if currTm[1] != ".":  # Делаем прверку на двузначность минут и секунд
+            min = float(currTm[:2])
+        else:
+            min = float(currTm[0])
+        if currTm[-2] != ".":
+            sec = float(currTm[-2:])
+        else:
+            sec = float(currTm[-1])
