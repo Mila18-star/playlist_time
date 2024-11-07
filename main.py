@@ -45,3 +45,5 @@ def get_duration(playlist: iter, n: int):
     sumTm = timedelta(minutes=0, seconds=0)       # Суммарное время песен
     length = len(playlist) - 1
 #дальше нужно сделать плейлисты в одном виде
+ if playlist != list(playlist):  # Приводим списки к единому виду
+        playlist = list(map(list, zip(*list(playlist.items()))))
